@@ -9,6 +9,7 @@ __pycache__/
 
 # files local
 feito.md
+saida.json
 
 # C extensions
 *.so
