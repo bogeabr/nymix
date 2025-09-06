@@ -1,0 +1,32 @@
+[project]
+name = "nymix"
+version = "0.1.0"
+description = "CLI para gerar e verificar nomes (domínios, handles) e abrir busca do INPI."
+authors = [
+    {name = "bogeabr - https://github.com/bogeabr"}
+]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "nymix"}]
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "typer[all] (>=0.17.4,<0.18.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "dnspython (>=2.7.0,<3.0.0)",
+    "python-slugify (>=8.0.4,<9.0.0)",
+    "rich (>=14.1.0,<15.0.0)"
+]
+
+[tool.poetry.scripts]
+nymix = "nymix.cli:app"
+[tool.ruff]
+line-length = 79
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.12.12"
+pytest = "^8.4.2"
+
